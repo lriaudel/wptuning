@@ -85,6 +85,18 @@ function sanitize_file_name_chars( $special_chars = array() ) {
 	return $special_chars;
 }
 
+/**
+ * @source https://gist.github.com/thierrypigot/90a97fdf84b033b72b32ca3ebfced2c1#file-username-admin-php
+ * Disallow "admin" as username
+ */
+add_filter('validate_username' , 'tp_deny_admin_username', 10, 2);
+function tp_deny_admin_username($valid, $username ) {
+	if( 'admin' == $username ) {
+		$valid = false;
+	}
+	return $valid;
+}
+
 
 /**
 * Other tunning

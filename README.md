@@ -7,6 +7,7 @@ Differents hooks and functions for improve WordPress and basic customize in a pl
 - Hide connections errors
 - Filter body_class in order to hide User ID and User nicename
 - No french punctuation and accents for filename
+- Disallow "admin" as username
 
 ## Tunning
 
