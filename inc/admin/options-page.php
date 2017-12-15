@@ -1,8 +1,7 @@
 <?php
 /**
- * @source http://wpsettingsapi.jeroensormani.com/
+ * @see http://wpsettingsapi.jeroensormani.com/
  */
-
 add_action( 'admin_menu', 'wptunning_add_admin_menu' );
 add_action( 'admin_init', 'wptunning_settings_init' );
 

@@ -17,22 +17,40 @@ function add_medium_large( $format ){
 }
 
 
-
+/**
+ * BEA Sanitize filename
+ * No french punctuation and accents for filename
+ * Description:  Remove all french punctuation and accents from the filename of upload for client limitation (Safari Mac/IOS)
+ * Plugin URI:   https://github.com/BeAPI/bea-sanitize-filename
+ * @version      1.0.2
+ * @author		BeAPI (http://www.beapi.fr)
+ */
 function wptunning_protect_media_filename() {
 
-	add_filter( 'sanitize_file_name', 'remove_accents', 10, 1 );
-	add_filter( 'sanitize_file_name_chars', 'sanitize_file_name_chars', 10, 1 );
+	add_filter( 'sanitize_file_name', 'bea_sanitize_file_name', 10, 1 );
+	add_filter( 'sanitize_file_name_chars', 'bea_sanitize_file_name_chars', 10, 1 );
 
 }
 
-/**
- * No french punctuation and accents for filename
- * Description:  Remove all french punctuation and accents from the filename of upload for client limitation (Safari Mac/IOS)
- * Plugin URI:   https://gist.github.com/herewithme/7704370
- * @version      1.0
- * @author		BeAPI (http://www.beapi.fr)
- */
-function sanitize_file_name_chars( $special_chars = array() ) {
-	$special_chars = array_merge( array( '’', '‘', '“', '”', '«', '»', '‹', '›', '—', 'æ', 'œ', '€' ), $special_chars );
+
+function bea_sanitize_file_name_chars( $special_chars = array() ) {
+	$special_chars = array_merge( array( '’', '‘', '“', '”', '«', '»', '‹', '›', '—', '€' ), $special_chars );
 	return $special_chars;
+}
+
+ /**
+ * Filters the filename by adding more rules :
+ * - only lowercase
+ * - replace _ by -
+ * @since 1.0.1
+ * @param string $file_name
+ * @return string
+ */
+function bea_sanitize_file_name( $file_name ) {
+	preg_match( '/\.[^\.]+$/i', $file_name, $ext );
+	$ext = $ext[0];
+	$file_name = str_replace( $ext, '', $file_name );
+	$file_name = sanitize_title( $file_name );
+	$file_name = str_replace( '_', '-', $file_name );
+	return $file_name . $ext;
 }

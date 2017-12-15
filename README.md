@@ -13,8 +13,8 @@ Differents hooks and functions to improve WordPress and basic customization in a
 ## Miscellaneous
 - Dashboard cleaning
 - Disallow file editor
-- Disable Emoji
-- Remove `<h1>` from the WordPress editor
+- Deactive Emoji
+- Remove `H1` from the WordPress editor
 
 ## HTML Head cleaning
 - Deactivate WordPress version

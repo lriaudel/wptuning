@@ -5,8 +5,8 @@
 
 /**
  * Disable the emoji's
- * @source https://www.keycdn.com/blog/website-performance-optimization/#http
- * @source https://fr.wordpress.org/plugins/disable-emojis/
+ * @see https://www.keycdn.com/blog/website-performance-optimization/#http
+ * @see https://fr.wordpress.org/plugins/disable-emojis/
  */
 function wptunning_disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );

@@ -34,7 +34,7 @@ function wptunning_deactivate_connection_error_wplogin(){
 
 /**
  * Deactivate author page and link page
- * @source https://blog.futtta.be/2017/08/28/no-author-pages/
+ * @see https://blog.futtta.be/2017/08/28/no-author-pages/
  * @return void
  */
 function wptunning_deactivate_author_page_and_link() {

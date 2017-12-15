@@ -1,12 +1,12 @@
 <?php
 /**
 * Revision setting limited to 5
-* @source https://codex.wordpress.org/Revisions
+* @see https://codex.wordpress.org/Revisions
 */
 if ( ! defined( 'WP_POST_REVISIONS' ) ) {
 	define( 'WP_POST_REVISIONS', 5 );
 }
-
+// défini trop tard -> hook wp_revisions_to_keep
 
 /**
  * Remove Yoast Bar
