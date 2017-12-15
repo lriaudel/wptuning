@@ -1,0 +1,172 @@
+<?php
+global $wpt_actions;
+
+/**
+ * List of all actions
+ * @var array
+ */
+$wpt_actions = array(
+	'rest-api' => 	array(
+		'label'			=> __('Deactivate REST-API', WPT_LG),
+		'description'	=> '',
+		'section'		=> 'security',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_deactivate_rest_api',
+		'args'			=>'',
+	),
+	'connection_error' => array(
+		'label'			=> __('Hide connection error<br>in <code>wp-login.php</code>', WPT_LG),
+		'description'	=> '',
+		'section'		=> 'security',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_deactivate_connection_error_wplogin',
+		'args'			=>'',
+	),
+	'deactivate_author' => array(
+		'label'			=> __('Deactivate author page and author link', WPT_LG),
+		'description'	=> '',
+		'section'		=> 'security',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_deactivate_author_page_and_link',
+		'args'			=>'',
+	),
+	'protect_media_filename' => array(
+		'label'			=> 'No punctuation and accents for uploaded file',
+		'description'	=> '',
+		'section'		=> 'media',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_protect_media_filename',
+		'args'			=> ''/*array( 'class' => 'meme' )*/
+	),
+	'add_medium_large' => array(
+		'label'			=> 'Add format <em>Medium Large</em>',
+		'description'	=> 'Display the existent default format <em>Medium Large</em> (768px) when you choose a media in a post.',
+		'section'		=> 'media',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_add_medium_large',
+		'args'			=>'',
+	),
+	'remove_default_dashboard_widgets' => array(
+		'label'			=> 'Deactivate the default widget in admin dashboard.',
+		'description'	=> '',
+		'section'		=> 'misc',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_remove_default_dashboard_widgets',
+		'args'			=>'',
+	),
+	'disallow_file_edit' => array(
+		'label'			=> 'Disallow file editor',
+		'description'	=> 'Disallow file editor for plugins and themes in wp-admin.',
+		'section'		=> 'misc',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_disallow_file_edit',
+		'args'			=>'',
+	),
+	'disable_emojis' => array(
+		'label'			=> 'Disabled emoji',
+		'description'	=> '',
+		'section'		=> 'misc',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_disable_emojis',
+		'args'			=>'',
+	),
+	'deactivate_H1' => array(
+		'id'			=> 'deactivate_H1',
+		'label'			=> 'Remove H1 in Tiny MCE selector',
+		'description'	=> '',
+		'section'		=> 'misc',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_deactivate_H1',
+		'args'			=>'',
+	),
+	'wp_generator' => array(
+		'label'			=> 'Deactivate WordPress version',
+		'description'	=> 'Deactivate the generator tag that is generated',
+		'section'		=> 'head',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_wp_generator',
+		'args'			=>'',
+	),
+	'wlwmanifest_link' => array(
+		'label'			=> 'Deactivate Windows Live Writer Manifest',
+		'description'	=> 'Deactivate Windows Live Writer Manifest Link.',
+		'section'		=> 'head',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_wlwmanifest_link',
+		'args'			=>'',
+	),
+	/*'rsd_link' => array(
+		'label'			=> 'Deactivate RSD',
+		'description'	=> 'Deactivate Display the link to the Really Simple Discovery service endpoint',
+		'section'		=> 'head',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_rsd_link',
+		'args'			=>'',
+	),
+	'xmlrpc_enabled' => array(
+		'label'			=> 'Deactivate XML-RPC',
+		'description'	=> 'Deactivate XML-RPC methods requiring authentication are enabled.',
+		'section'		=> 'head',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_xmlrpc_enabled',
+		'args'			=>'',
+	),*/
+	'xmlrpc_enabled_rsd' => array(
+		'label'			=> 'Deactivate XML-RPC',
+		'description'	=> 'Deactivate XML-RPC methods requiring authentication are enabled.',
+		'section'		=> 'head',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_xmlrpc_enabled_rsd',
+		'args'			=>'',
+	),
+	'feed_links' => array(
+		'label'			=> 'Deactivate RSS feed',
+		'description'	=> '',
+		'section'		=> 'head',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_feed_link',
+		'args'			=>'',
+	),
+	'feed_links_extra' => array(
+		'label'			=> 'Deactivate Comment RSS feed',
+		'description'	=> '',
+		'section'		=> 'head',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_comments_feed',
+		'args'			=>'',
+	),
+	/***
+	'start_post_rel_link' => array(
+		'label'			=> '',
+		'description'	=> '',
+		'section'		=> 'head',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_start_post_rel_link',
+		'args'			=>'',
+	),
+	'wp_shortlink_wp_head' => array(
+		'label'			=> '',
+		'description'	=> '',
+		'section'		=> 'head',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_wp_shortlink_wp_head',
+		'args'			=>'',
+	),
+	'index_rel_link' => array(
+		'label'			=> '',
+		'description'	=> '',
+		'section'		=> 'head',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_index_rel_link',
+		'args'			=>'',
+	),
+	'parent_post_rel_link' => array(
+		'label'			=> '',
+		'description'	=> '',
+		'section'		=> 'head',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptunning_parent_post_rel_link',
+		'args'			=>'',
+	),
+	*/
+); // end $wpt_actions
