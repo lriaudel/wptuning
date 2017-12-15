@@ -1,27 +1,25 @@
 # WP-Tunning
-Differents hooks and functions for improve WordPress and basic customize in a plugin.
+Differents hooks and functions to improve WordPress and basic customization in a plugin.
 
 ## Security
-- Deactivate Rest-API
+- Deactivate WP Rest API
 - Hide connections errors
 - Deactivate author page and author link
 
-## Média
-- No french punctuation and accents for filename
+## Media
+- No french punctuation and accents for filenames
 - Add medium format `medium_large` to media in admin
 
-## Divers
+## Miscellaneous
 - Dashboard cleaning
 - Disallow file editor
-- Deactive Emoji
-- Remove `H1` from the WordPress editor
+- Disable Emoji
+- Remove `<h1>` from the WordPress editor
 
-## Head cleanning
+## HTML Head cleaning
 - Deactivate WordPress version
 - Remove Windows Live Writer Manifest
 - Deactivate XML-RPC
 - Deactivate RSS feed
 - Deactivate Comment RSS feed
-
-
 
