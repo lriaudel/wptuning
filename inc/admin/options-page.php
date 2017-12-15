@@ -7,14 +7,14 @@ add_action( 'admin_menu', 'wptunning_add_admin_menu' );
 add_action( 'admin_init', 'wptunning_settings_init' );
 
 
-function wptunning_add_admin_menu(  ) {
+function wptunning_add_admin_menu() {
 
 	add_options_page( 'WP Tunning', 'WP Tunning', 'manage_options', 'wp_tunning', 'wptunning_options_page' );
 
 }
 
 
-function wptunning_settings_init(  ) {
+function wptunning_settings_init() {
 
 	global $wptunning_settings_name, $wpt_actions, $wpt_sections;
 
@@ -22,9 +22,9 @@ function wptunning_settings_init(  ) {
 
 	$section_id = null;
 
-	foreach( $wpt_actions as $id => $action ) {
+	foreach ( $wpt_actions as $id => $action ) {
 		// Setting section
-		if( isset($action['section']) && $action['section'] !== $section_id ) {
+		if ( isset( $action['section'] ) && $action['section'] !== $section_id ) {
 
 			$section_id = $action['section'];
 			$section_name = esc_html( $wpt_sections[ $section_id ]['name'] );
@@ -40,7 +40,7 @@ function wptunning_settings_init(  ) {
 		}
 
 		// Actions / Fiedls
-		if( isset($action['label']) && isset($action['type']) && isset($action['cb'])  ) {
+		if ( isset( $action['label'] ) && isset( $action['type'] ) && isset( $action['cb'] ) ) {
 
 			add_settings_field(
 				'wptunning_field_' . esc_attr( $id ),
@@ -65,16 +65,16 @@ function wptunning_field_view( $id, $action ) {
 
 	$options = get_option( $wptunning_settings_name );
 
-	if ( isset( $options[ $id ] ) ){
+	if ( isset( $options[ $id ] ) ) {
 		$action_option_value = $options[ $id ];
 	}
 
-	switch( $action['type'] ){
+	switch ( $action['type'] ) {
 
 		default:
 			?>
 			<input type='checkbox'
-				id='<?php echo esc_attr($id); ?>'
+				id='<?php echo esc_attr( $id ); ?>'
 				name='<?php echo esc_attr( $wptunning_settings_name . '[' . $id . ']' ); ?>'
 				<?php checked( $action_option_value, 1 ); ?>
 				value='1'
@@ -83,21 +83,21 @@ function wptunning_field_view( $id, $action ) {
 		break;
 	}
 
-	if( isset( $action['description'] ) ) {
+	if ( isset( $action['description'] ) ) {
 		echo $action['description'];
 	}
 
 }
 
 
-function wptunning_section_security_callback(  ) {
+function wptunning_section_security_callback() {
 
-	echo __( 'This section description', 'wptunning' );
+	_e( 'This section description', 'wptunning' );
 
 }
 
 
-function wptunning_options_page(  ) {
+function wptunning_options_page() {
 	?>
 	<form action='options.php' method='post'>
 
