@@ -3,8 +3,8 @@
 * Revision setting limited to 5
 * @source https://codex.wordpress.org/Revisions
 */
-if(!defined('WP_POST_REVISIONS')){
-	define('WP_POST_REVISIONS', 5);
+if ( ! defined( 'WP_POST_REVISIONS' ) ) {
+	define( 'WP_POST_REVISIONS', 5 );
 }
 
 

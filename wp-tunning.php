@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WP Tunning
  * Plugin URI: https://codetheworld.info
- * Description: Differents hooks and functions for improve WordPress and basic customize in a plugin.
+ * Description: Differents hooks and functions to improve WordPress and basic customization in a plugin.
  * Version: 1.0
  * Author: lriaudel
  * Contributors:
@@ -46,9 +46,6 @@ function wptunning_init() {
 	if ( is_admin() ) {
 		include WPT_DIR . '/inc/admin/options-page.php';
 		include WPT_DIR . '/inc/admin/plugins.php';
-	}
-	else{
-		//var_dump( get_option('wptunning_settings') ); die();
 	}
 
 	include WPT_DIR . '/inc/common/exe_actions.php';
