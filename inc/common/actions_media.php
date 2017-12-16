@@ -1,7 +1,7 @@
 <?php
 
 function wptunning_add_medium_large() {
-	add_filter( 'image_size_names_choose', 'add_medium_large');
+	add_filter( 'image_size_names_choose', 'add_medium_large' );
 }
 
 /**
@@ -12,7 +12,7 @@ function wptunning_add_medium_large() {
 * @return array $format
 */
 function add_medium_large( $format ){
-	$format['medium_large'] = __('Medium Large');
+	$format['medium_large'] = __( 'Medium Large' );
 	return $format;
 }
 
@@ -31,7 +31,6 @@ function wptunning_protect_media_filename() {
 	add_filter( 'sanitize_file_name_chars', 'bea_sanitize_file_name_chars', 10, 1 );
 
 }
-
 
 function bea_sanitize_file_name_chars( $special_chars = array() ) {
 	$special_chars = array_merge( array( '’', '‘', '“', '”', '«', '»', '‹', '›', '—', '€' ), $special_chars );

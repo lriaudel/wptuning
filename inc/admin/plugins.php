@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Add a 'Setting' link on plugin page
+ */
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'wptunning_settings_action_links', 10, 2 );
 
 function wptunning_settings_action_links( $links, $file ) {

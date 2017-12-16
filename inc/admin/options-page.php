@@ -91,7 +91,7 @@ function wptunning_field_view( $id, $action ) {
 
 function wptunning_section_security_callback() {
 
-	_e( 'This section description', 'wptunning' );
+	echo __( 'Options to improve WordPress', WPT_LG );
 
 }
 

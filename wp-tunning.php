@@ -16,6 +16,7 @@
 
 defined( 'ABSPATH' ) || die( 'O.o' );
 
+
 /**
  * Constants
  */
@@ -24,8 +25,29 @@ define( 'WPT_DIR', dirname(__FILE__) );
 define( 'WPT_SLUG', 'wptunning-options' );
 define( 'WPT_LG', 'wptunning' );
 
+
+/**
+ * Global variables
+ */
+/**
+ * [global description]
+ * @var string
+ */
 global $wptunning_settings_name;
 $wptunning_settings_name = 'wptunning_settings';
+
+/**
+ * All actions list
+ * @var array
+ */
+global $wpt_actions;
+
+/**
+ * All sections list
+ * @var array
+ */
+global $wpt_sections;
+
 
 /**
  * Tell WP what to do when plugin is loaded.
@@ -39,7 +61,7 @@ function wptunning_init() {
 
 	global $wpt_sections;
 
-	foreach( $wpt_sections as $section ) {
+	foreach ( $wpt_sections as $section ) {
 		include $section['file'];
 	}
 

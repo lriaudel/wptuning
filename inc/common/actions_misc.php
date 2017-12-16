@@ -56,6 +56,7 @@ function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 }
 /*========================= end emoji ============================= */
 
+
 function wptunning_remove_default_dashboard_widgets() {
 	add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 }
@@ -76,17 +77,14 @@ function remove_dashboard_widgets() {
 }
 
 
-
 /**
  * Deactivate file editor for plugins and themes in wp-admin
  */
 function wptunning_disallow_file_edit() {
-	if( !defined('DISALLOW_FILE_EDIT') ) {
+	if ( !defined('DISALLOW_FILE_EDIT') ) {
 		define('DISALLOW_FILE_EDIT', true);
 	}
 }
-
-
 
 
 function wptunning_deactivate_H1() {

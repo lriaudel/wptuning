@@ -3,7 +3,6 @@
 /**
  * Deactivate REST-API
  */
-
 function wptunning_deactivate_rest_api(){
 
 	remove_action( 'init',          'rest_api_init' );
@@ -43,7 +42,6 @@ function wptunning_deactivate_author_page_and_link() {
 	add_filter( 'author_link', 'remove_author_pages_link' );
 
 }
-
 
 // Remove Author Pages and Links
 function remove_author_pages_page() {
