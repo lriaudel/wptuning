@@ -3,7 +3,7 @@
  * Plugin Name: WP Tunning
  * Plugin URI: https://codetheworld.info
  * Description: Differents hooks and functions to improve WordPress and basic customization in a plugin.
- * Version: 1.0-beta2
+ * Version: 1.0-beta3
  * Author: lriaudel
  * Contributors:
  * Tested up to: 4.9
@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || die( 'O.o' );
 /**
  * Constants
  */
-define( 'WPT_VERSION', '1.0-beta2' );
+define( 'WPT_VERSION', '1.0-beta3' );
 define( 'WPT_DIR', dirname(__FILE__) );
 define( 'WPT_SLUG', 'wptunning-options' );
 define( 'WPT_LG', 'wptunning' );

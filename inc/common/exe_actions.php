@@ -18,16 +18,27 @@ function wptunning_exe() {
 			if ( isset( $wpt_actions[$action] )
 				&& isset( $wpt_actions[$action]['cb'] )
 			) {
-				switch( $wpt_actions[$action]['type'] ) {
+				switch ( $wpt_actions[$action]['type'] ) {
+
+					case 'text':
+
+							wpt_action_callback( $wpt_actions[$action]['cb'] );
+							
+						break;
+
 					case 'radio':
 					case 'checkbox':
+
 						if ( '1' == $value || 'on' == $value ) {
 							wpt_action_callback( $wpt_actions[$action]['cb'] );
 						}
-					break;
+
+						break;
+
 					default:
 						var_dump( __( 'WP Tunning: Define a type in your action.' ) );
-					break;
+						break;
+
 				}
 
 			}

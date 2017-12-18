@@ -70,16 +70,25 @@ function wptunning_field_view( $id, $action ) {
 
 	switch ( $action['type'] ) {
 
-		default:
+		case 'text':
 			?>
-			<input type='checkbox'
-				id='<?php echo esc_attr( $id ); ?>'
-				name='<?php echo esc_attr( $wptunning_settings_name . '[' . $id . ']' ); ?>'
-				<?php checked( $action_option_value, 1 ); ?>
-				value='1'
+			<input type="text"
+				id="<?php echo esc_attr( $id ); ?>"
+				name="<?php echo esc_attr( $wptunning_settings_name . '[' . $id . ']' ); ?>"
+				value="<?php echo wp_kses( $action_option_value ); ?>"
 			>
 			<?php
-		break;
+			break;
+		default:
+			?>
+			<input type="checkbox"
+				id="<?php echo esc_attr( $id ); ?>"
+				name="<?php echo esc_attr( $wptunning_settings_name . '[' . $id . ']' ); ?>"
+				<?php checked( $action_option_value, 1 ); ?>
+				value="1"
+			>
+			<?php
+			break;
 	}
 
 	if ( isset( $action['description'] ) ) {
@@ -88,14 +97,6 @@ function wptunning_field_view( $id, $action ) {
 
 }
 
-
-function wptunning_section_security_callback() {
-
-	echo __( 'Options to improve WordPress', WPT_LG );
-
-}
-
-
 function wptunning_options_page() {
 	?>
 	<form action='options.php' method='post'>
@@ -103,14 +104,13 @@ function wptunning_options_page() {
 		<h1>WP Tunning</h1>
 
 		<p>
-			<?php _e('Texte de présentation'); ?>
+			<?php echo __( 'Options to improve WordPress', WPT_LG ); ?>
 		</p>
 		<?php
 		settings_fields( WPT_SLUG );
 		do_settings_sections( WPT_SLUG );
 		submit_button();
 		?>
-
 	</form>
 	<?php
 }

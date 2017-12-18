@@ -102,3 +102,25 @@ function modify_editor_buttons( $init ) {
 	$init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;Preformatted=pre;';
 	return $init;
 }
+
+
+function wptunning_define_post_revision() {
+
+	global $wptunning_settings_name, $wpt_actions;
+
+	$wptunning_settings = get_option( $wptunning_settings_name );
+
+	$post_revision_nb = $wptunning_settings['define_post_revision'];
+
+	if( '' === $post_revision_nb ){
+		return;
+	}
+	else{
+		$post_revision_nb = (int) $post_revision_nb;
+	}
+
+	add_filter( 'wp_revisions_to_keep', function() use ($post_revision_nb) {
+		return $post_revision_nb;
+	}, 10, 2 );
+
+}

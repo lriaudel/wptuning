@@ -71,11 +71,19 @@ $wpt_actions = array(
 		'args'			=> '',
 	),
 	'deactivate_H1' => array(
-		'label'			=> __( 'Remove H1 in Tiny MCE selector', WPT_LG ),
+		'label'			=> __( 'Remove H1 in Tiny MCE', WPT_LG ),
 		'description'	=> __( '<em>H1</em> should never be used in the editor', WPT_LG ),
 		'section'		=> 'misc',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptunning_deactivate_H1',
+		'args'			=> '',
+	),
+	'define_post_revision' => array(
+		'label'			=> __( 'Number max of revisions', WPT_LG ),
+		'description'	=> __( 'Define the number of revisions you want that WordPress saved. (Leave blank for unlimited)', WPT_LG ),
+		'section'		=> 'misc',
+		'type'			=> 'text',
+		'cb'			=> 'wptunning_define_post_revision',
 		'args'			=> '',
 	),
 	'wp_generator' => array(
