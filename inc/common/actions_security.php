@@ -3,7 +3,7 @@
 /**
  * Deactivate REST-API
  */
-function wptunning_deactivate_rest_api(){
+function wptuning_deactivate_rest_api(){
 
 	remove_action( 'init',          'rest_api_init' );
 	remove_action( 'parse_request', 'rest_api_loaded' );
@@ -25,7 +25,7 @@ function wptunning_deactivate_rest_api(){
 /**
  * Hide connections errors in wp-login.php
  */
-function wptunning_deactivate_connection_error_wplogin(){
+function wptuning_deactivate_connection_error_wplogin(){
 
 	add_filter( 'login_errors', '__return_empty_string' );
 
@@ -36,7 +36,7 @@ function wptunning_deactivate_connection_error_wplogin(){
  * @see https://blog.futtta.be/2017/08/28/no-author-pages/
  * @return void
  */
-function wptunning_deactivate_author_page_and_link() {
+function wptuning_deactivate_author_page_and_link() {
 
 	add_action( 'template_redirect', 'remove_author_pages_page' );
 	add_filter( 'author_link', 'remove_author_pages_link' );

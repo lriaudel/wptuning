@@ -11,7 +11,7 @@ $wpt_actions = array(
 		'description'	=> __( '', WPT_LG ),
 		'section'		=> 'security',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_deactivate_rest_api',
+		'cb'			=> 'wptuning_deactivate_rest_api',
 		'args'			=> '',
 	),
 	'connection_error' => array(
@@ -19,7 +19,7 @@ $wpt_actions = array(
 		'description'	=> __( 'Hide connection error information in <code>wp-login.php</code>', WPT_LG ),
 		'section'		=> 'security',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_deactivate_connection_error_wplogin',
+		'cb'			=> 'wptuning_deactivate_connection_error_wplogin',
 		'args'			=> '',
 	),
 	'deactivate_author' => array(
@@ -27,7 +27,7 @@ $wpt_actions = array(
 		'description'	=> __( '', WPT_LG ),
 		'section'		=> 'security',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_deactivate_author_page_and_link',
+		'cb'			=> 'wptuning_deactivate_author_page_and_link',
 		'args'			=> '',
 	),
 	'protect_media_filename' => array(
@@ -35,7 +35,7 @@ $wpt_actions = array(
 		'description'	=> __( '', WPT_LG ),
 		'section'		=> 'media',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_protect_media_filename',
+		'cb'			=> 'wptuning_protect_media_filename',
 		'args'			=> ''/*array( 'class' => 'meme' )*/
 	),
 	'add_medium_large' => array(
@@ -43,7 +43,7 @@ $wpt_actions = array(
 		'description'	=> __( 'Display the existent default format <em>Medium Large</em> (768px) when you choose a media in a post', WPT_LG ),
 		'section'		=> 'media',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_add_medium_large',
+		'cb'			=> 'wptuning_add_medium_large',
 		'args'			=> '',
 	),
 	'remove_default_dashboard_widgets' => array(
@@ -51,7 +51,7 @@ $wpt_actions = array(
 		'description'	=> __( 'Deactivate the default widget (<em>welcome panel</em>, <em>Activity</em>, <em>Quick Draft</em>, <em>WordPress Events and News</em>)  in admin dashboard', WPT_LG ),
 		'section'		=> 'misc',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_remove_default_dashboard_widgets',
+		'cb'			=> 'wptuning_remove_default_dashboard_widgets',
 		'args'			=> '',
 	),
 	'disallow_file_edit' => array(
@@ -59,7 +59,7 @@ $wpt_actions = array(
 		'description'	=> __( 'Disallow file editor for plugins and themes in wp-admin.', WPT_LG ),
 		'section'		=> 'misc',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_disallow_file_edit',
+		'cb'			=> 'wptuning_disallow_file_edit',
 		'args'			=> '',
 	),
 	'disable_emojis' => array(
@@ -67,7 +67,7 @@ $wpt_actions = array(
 		'description'	=> __( 'Reduces resources number loaded on front page', WPT_LG ),
 		'section'		=> 'misc',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_disable_emojis',
+		'cb'			=> 'wptuning_disable_emojis',
 		'args'			=> '',
 	),
 	'deactivate_H1' => array(
@@ -75,7 +75,7 @@ $wpt_actions = array(
 		'description'	=> __( '<em>H1</em> should never be used in the editor', WPT_LG ),
 		'section'		=> 'misc',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_deactivate_H1',
+		'cb'			=> 'wptuning_deactivate_H1',
 		'args'			=> '',
 	),
 	'define_post_revision' => array(
@@ -83,7 +83,7 @@ $wpt_actions = array(
 		'description'	=> __( 'Define the number of revisions you want that WordPress saved. (Leave blank for unlimited)', WPT_LG ),
 		'section'		=> 'misc',
 		'type'			=> 'text',
-		'cb'			=> 'wptunning_define_post_revision',
+		'cb'			=> 'wptuning_define_post_revision',
 		'args'			=> '',
 	),
 	'wp_generator' => array(
@@ -91,7 +91,7 @@ $wpt_actions = array(
 		'description'	=> __( 'Remove the generator tag that is generated', WPT_LG ),
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_wp_generator',
+		'cb'			=> 'wptuning_wp_generator',
 		'args'			=> '',
 	),
 	'wlwmanifest_link' => array(
@@ -99,7 +99,7 @@ $wpt_actions = array(
 		'description'	=> __( 'Remove Windows Live Writer Manifest Link.', WPT_LG ),
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_wlwmanifest_link',
+		'cb'			=> 'wptuning_wlwmanifest_link',
 		'args'			=> '',
 	),
 	/*'rsd_link' => array(
@@ -107,7 +107,7 @@ $wpt_actions = array(
 		'description'	=> 'Deactivate Display the link to the Really Simple Discovery service endpoint',
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_rsd_link',
+		'cb'			=> 'wptuning_rsd_link',
 		'args'			=> '',
 	),
 	'xmlrpc_enabled' => array(
@@ -115,7 +115,7 @@ $wpt_actions = array(
 		'description'	=> 'Deactivate XML-RPC methods requiring authentication are enabled.',
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_xmlrpc_enabled',
+		'cb'			=> 'wptuning_xmlrpc_enabled',
 		'args'			=> '',
 	),*/
 	'xmlrpc_enabled_rsd' => array(
@@ -123,7 +123,7 @@ $wpt_actions = array(
 		'description'	=> __( 'Deactivate XML-RPC methods requiring authentication are enabled.', WPT_LG ),
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_xmlrpc_enabled_rsd',
+		'cb'			=> 'wptuning_xmlrpc_enabled_rsd',
 		'args'			=> '',
 	),
 	'feed_links' => array(
@@ -131,7 +131,7 @@ $wpt_actions = array(
 		'description'	=> __( '', WPT_LG ),
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_feed_link',
+		'cb'			=> 'wptuning_feed_link',
 		'args'			=> '',
 	),
 	'feed_links_extra' => array(
@@ -139,7 +139,7 @@ $wpt_actions = array(
 		'description'	=> __( '', WPT_LG ),
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_comments_feed',
+		'cb'			=> 'wptuning_comments_feed',
 		'args'			=> '',
 	),
 	/***
@@ -148,7 +148,7 @@ $wpt_actions = array(
 		'description'	=> '',
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_start_post_rel_link',
+		'cb'			=> 'wptuning_start_post_rel_link',
 		'args'			=>'',
 	),
 	'wp_shortlink_wp_head' => array(
@@ -156,7 +156,7 @@ $wpt_actions = array(
 		'description'	=> '',
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_wp_shortlink_wp_head',
+		'cb'			=> 'wptuning_wp_shortlink_wp_head',
 		'args'			=>'',
 	),
 	'index_rel_link' => array(
@@ -164,7 +164,7 @@ $wpt_actions = array(
 		'description'	=> '',
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_index_rel_link',
+		'cb'			=> 'wptuning_index_rel_link',
 		'args'			=>'',
 	),
 	'parent_post_rel_link' => array(
@@ -172,7 +172,7 @@ $wpt_actions = array(
 		'description'	=> '',
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
-		'cb'			=> 'wptunning_parent_post_rel_link',
+		'cb'			=> 'wptuning_parent_post_rel_link',
 		'args'			=>'',
 	),
 	*/

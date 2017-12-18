@@ -1,4 +1,4 @@
-# WP-Tunning
+# WP-Tuning
 Differents hooks and functions to improve WordPress and basic customization in a plugin.
 
 ## Security
@@ -22,4 +22,3 @@ Differents hooks and functions to improve WordPress and basic customization in a
 - Deactivate XML-RPC
 - Deactivate RSS feed
 - Deactivate Comment RSS feed
-

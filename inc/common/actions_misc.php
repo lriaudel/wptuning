@@ -8,7 +8,7 @@
  * @see https://www.keycdn.com/blog/website-performance-optimization/#http
  * @see https://fr.wordpress.org/plugins/disable-emojis/
  */
-function wptunning_disable_emojis() {
+function wptuning_disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 	remove_action( 'wp_print_styles', 'print_emoji_styles' );
@@ -57,7 +57,7 @@ function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 /*========================= end emoji ============================= */
 
 
-function wptunning_remove_default_dashboard_widgets() {
+function wptuning_remove_default_dashboard_widgets() {
 	add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 }
 
@@ -80,14 +80,14 @@ function remove_dashboard_widgets() {
 /**
  * Deactivate file editor for plugins and themes in wp-admin
  */
-function wptunning_disallow_file_edit() {
+function wptuning_disallow_file_edit() {
 	if ( !defined('DISALLOW_FILE_EDIT') ) {
 		define('DISALLOW_FILE_EDIT', true);
 	}
 }
 
 
-function wptunning_deactivate_H1() {
+function wptuning_deactivate_H1() {
 	add_filter( 'tiny_mce_before_init', 'modify_editor_buttons' );
 }
 
@@ -104,13 +104,13 @@ function modify_editor_buttons( $init ) {
 }
 
 
-function wptunning_define_post_revision() {
+function wptuning_define_post_revision() {
 
-	global $wptunning_settings_name, $wpt_actions;
+	global $wptuning_settings_name, $wpt_actions;
 
-	$wptunning_settings = get_option( $wptunning_settings_name );
+	$wptuning_settings = get_option( $wptuning_settings_name );
 
-	$post_revision_nb = $wptunning_settings['define_post_revision'];
+	$post_revision_nb = $wptuning_settings['define_post_revision'];
 
 	if( '' === $post_revision_nb ){
 		return;

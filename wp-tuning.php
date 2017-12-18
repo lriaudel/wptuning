@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: WP Tunning
+ * Plugin Name: WP Tuning
  * Plugin URI: https://codetheworld.info
  * Description: Differents hooks and functions to improve WordPress and basic customization in a plugin.
- * Version: 1.0-beta3
+ * Version: 1.0-beta4
  * Author: lriaudel
  * Contributors:
  * Tested up to: 4.9
@@ -20,10 +20,10 @@ defined( 'ABSPATH' ) || die( 'O.o' );
 /**
  * Constants
  */
-define( 'WPT_VERSION', '1.0-beta3' );
+define( 'WPT_VERSION', '1.0-beta4' );
 define( 'WPT_DIR', dirname(__FILE__) );
-define( 'WPT_SLUG', 'wptunning-options' );
-define( 'WPT_LG', 'wptunning' );
+define( 'WPT_SLUG', 'wptuning_settings' );
+define( 'WPT_LG', 'wptuning' );
 
 
 /**
@@ -33,8 +33,8 @@ define( 'WPT_LG', 'wptunning' );
  * [global description]
  * @var string
  */
-global $wptunning_settings_name;
-$wptunning_settings_name = 'wptunning_settings';
+global $wptuning_settings_name;
+$wptuning_settings_name = 'wptuning_settings';
 
 /**
  * All actions list
@@ -52,9 +52,9 @@ global $wpt_sections;
 /**
  * Tell WP what to do when plugin is loaded.
  */
-add_action( 'plugins_loaded', 'wptunning_init' );
+add_action( 'plugins_loaded', 'wptuning_init' );
 
-function wptunning_init() {
+function wptuning_init() {
 
 	include WPT_DIR . '/inc/common/wpt_actions.php';
 	include WPT_DIR . '/inc/common/wpt_sections.php';
@@ -73,7 +73,7 @@ function wptunning_init() {
 	include WPT_DIR . '/inc/common/exe_actions.php';
 
 	/**
-	* Fires when WP-Tunning is correctly loaded.
+	* Fires when WP-Tuning is correctly loaded.
 	*/
-	do_action( 'wptunning_loaded' );
+	do_action( 'wptuning_loaded' );
 }

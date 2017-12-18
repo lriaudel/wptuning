@@ -1,6 +1,6 @@
 <?php
 
-function wptunning_add_medium_large() {
+function wptuning_add_medium_large() {
 	add_filter( 'image_size_names_choose', 'add_medium_large' );
 }
 
@@ -25,7 +25,7 @@ function add_medium_large( $format ){
  * @version      1.0.2
  * @author		BeAPI (http://www.beapi.fr)
  */
-function wptunning_protect_media_filename() {
+function wptuning_protect_media_filename() {
 
 	add_filter( 'sanitize_file_name', 'bea_sanitize_file_name', 10, 1 );
 	add_filter( 'sanitize_file_name_chars', 'bea_sanitize_file_name_chars', 10, 1 );
