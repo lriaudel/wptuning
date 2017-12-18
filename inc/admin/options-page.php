@@ -4,11 +4,20 @@
  */
 add_action( 'admin_menu', 'wptuning_add_admin_menu' );
 add_action( 'admin_init', 'wptuning_settings_init' );
+add_action( 'admin_enqueue_scripts', 'wptuning_enqueue_script' );
 
+function wptuning_enqueue_script() {
+	global $pagenow;
+
+	if ( 'options-general.php' == $pagenow && WPT_PAGE_SLUG == $_GET['page'] ) {
+		wp_register_script( 'wptuning-admin', WPT_URL . 'assets/js/admin.js', 'jquery' );
+		wp_enqueue_script( 'wptuning-admin' );
+	}
+}
 
 function wptuning_add_admin_menu() {
 
-	add_options_page( 'WP Tuning', 'WP Tuning', 'manage_options', 'wp_tuning', 'wptuning_options_page' );
+	add_options_page( 'WP Tuning', 'WP Tuning', 'manage_options', WPT_PAGE_SLUG, 'wptuning_options_page' );
 
 }
 
@@ -65,6 +74,11 @@ function wptuning_field_view( $id, $action ) {
 
 	$options = get_option( $wptuning_settings_name );
 
+	$default = '';
+	if ( isset( $action['default'] ) ) {
+		$default = $action['default'];
+	}
+
 	if ( isset( $options[ $id ] ) ) {
 		$action_option_value = $options[ $id ];
 	}
@@ -75,6 +89,7 @@ function wptuning_field_view( $id, $action ) {
 			?>
 			<input type="text"
 				id="<?php echo esc_attr( $id ); ?>"
+				data-default="<?php echo esc_attr( $default ); ?>"
 				name="<?php echo esc_attr( $wptuning_settings_name . '[' . $id . ']' ); ?>"
 				value="<?php echo wp_kses( $action_option_value , array() ); ?>"
 			>
@@ -84,6 +99,7 @@ function wptuning_field_view( $id, $action ) {
 			?>
 			<input type="checkbox"
 				id="<?php echo esc_attr( $id ); ?>"
+				data-default="<?php echo esc_attr( $default ); ?>"
 				name="<?php echo esc_attr( $wptuning_settings_name . '[' . $id . ']' ); ?>"
 				<?php checked( $action_option_value, 1 ); ?>
 				value="1"
@@ -104,9 +120,13 @@ function wptuning_options_page() {
 	<form action='options.php' method='post'>
 
 		<h1>WP Tuning</h1>
-
 		<p>
 			<?php echo __( 'Options to improve WordPress', WPT_LG ); ?>
+		</p>
+		<p>
+			<button type="button" id="wptunning-default-button" class="button-primary">
+				<?php _e('Set to default setting', WPT_LG) ?>
+			</button>
 		</p>
 		<?php
 		settings_fields( WPT_SLUG );

@@ -12,6 +12,7 @@ $wpt_actions = array(
 		'section'		=> 'security',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_deactivate_rest_api',
+		'default'		=> 'false',
 		'args'			=> '',
 	),
 	'connection_error' => array(
@@ -20,6 +21,7 @@ $wpt_actions = array(
 		'section'		=> 'security',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_deactivate_connection_error_wplogin',
+		'default'		=> 'true',
 		'args'			=> '',
 	),
 	'deactivate_author' => array(
@@ -28,6 +30,7 @@ $wpt_actions = array(
 		'section'		=> 'security',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_deactivate_author_page_and_link',
+		'default'		=> 'true',
 		'args'			=> '',
 	),
 	'protect_media_filename' => array(
@@ -36,6 +39,7 @@ $wpt_actions = array(
 		'section'		=> 'media',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_protect_media_filename',
+		'default'		=> 'true',
 		'args'			=> ''/*array( 'class' => 'meme' )*/
 	),
 	'add_medium_large' => array(
@@ -44,6 +48,7 @@ $wpt_actions = array(
 		'section'		=> 'media',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_add_medium_large',
+		'default'		=> 'true',
 		'args'			=> '',
 	),
 	'remove_default_dashboard_widgets' => array(
@@ -52,6 +57,7 @@ $wpt_actions = array(
 		'section'		=> 'misc',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_remove_default_dashboard_widgets',
+		'default'		=> 'true',
 		'args'			=> '',
 	),
 	'disallow_file_edit' => array(
@@ -60,6 +66,7 @@ $wpt_actions = array(
 		'section'		=> 'misc',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_disallow_file_edit',
+		'default'		=> 'true',
 		'args'			=> '',
 	),
 	'disable_emojis' => array(
@@ -68,6 +75,7 @@ $wpt_actions = array(
 		'section'		=> 'misc',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_disable_emojis',
+		'default'		=> 'true',
 		'args'			=> '',
 	),
 	'deactivate_H1' => array(
@@ -76,6 +84,7 @@ $wpt_actions = array(
 		'section'		=> 'misc',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_deactivate_H1',
+		'default'		=> 'true',
 		'args'			=> '',
 	),
 	'define_post_revision' => array(
@@ -84,6 +93,7 @@ $wpt_actions = array(
 		'section'		=> 'misc',
 		'type'			=> 'text',
 		'cb'			=> 'wptuning_define_post_revision',
+		'default'		=> '5',
 		'args'			=> '',
 	),
 	'wp_generator' => array(
@@ -92,6 +102,7 @@ $wpt_actions = array(
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_wp_generator',
+		'default'		=> 'true',
 		'args'			=> '',
 	),
 	'wlwmanifest_link' => array(
@@ -100,6 +111,7 @@ $wpt_actions = array(
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_wlwmanifest_link',
+		'default'		=> 'true',
 		'args'			=> '',
 	),
 	/*'rsd_link' => array(
@@ -124,6 +136,7 @@ $wpt_actions = array(
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_xmlrpc_enabled_rsd',
+		'default'		=> 'true',
 		'args'			=> '',
 	),
 	'feed_links' => array(
@@ -132,6 +145,7 @@ $wpt_actions = array(
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_feed_link',
+		'default'		=> 'false',
 		'args'			=> '',
 	),
 	'feed_links_extra' => array(
@@ -140,6 +154,7 @@ $wpt_actions = array(
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_comments_feed',
+		'default'		=> 'false',
 		'args'			=> '',
 	),
 	/***
