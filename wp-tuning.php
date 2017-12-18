@@ -3,9 +3,12 @@
  * Plugin Name: WP Tuning
  * Plugin URI: https://codetheworld.info
  * Description: Differents hooks and functions to improve WordPress and basic customization in a plugin.
- * Version: 1.0-beta5
+ * Version: 1.0-beta6
  * Author: lriaudel
+ * Text Domain: wptuning
+ * Domain Path: /languages/
  * Contributors:
+ * GitHub Plugin URI: https://github.com/lriaudel/wp-tuning
  * Tested up to: 4.9
  * Requires PHP: 5.4+
  * Author URI: http://ludovic.riaudel.net
@@ -20,7 +23,7 @@ defined( 'ABSPATH' ) || die( 'O.o' );
 /**
  * Constants
  */
-define( 'WPT_VERSION', '1.0-beta5' );
+define( 'WPT_VERSION', '1.0-beta6' );
 define( 'WPT_DIR', dirname( __FILE__ ) );
 define( 'WPT_URL', plugin_dir_url( __FILE__ ) );
 define( 'WPT_SLUG', 'wptuning_settings' );
