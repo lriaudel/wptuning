@@ -67,13 +67,12 @@ function wptuning_remove_default_dashboard_widgets() {
 */
 function remove_dashboard_widgets() {
 
-	remove_action('welcome_panel', 'wp_welcome_panel',99); // Remove Welcome panel
-	//remove_meta_box('dashboard_right_now', 'dashboard', 'normal');// Remove "At a Glance"
-	remove_meta_box('dashboard_activity', 'dashboard', 'normal');// Remove "Activity" which includes "Recent Comments"
-	remove_meta_box('dashboard_quick_press', 'dashboard', 'side');// Remove Quick Draft
-	remove_meta_box('dashboard_primary', 'dashboard', 'side');// Remove WordPress Events and News
+	remove_action('welcome_panel', 'wp_welcome_panel',99);				// Remove Welcome panel
+	//remove_meta_box('dashboard_right_now', 'dashboard', 'normal');	// Remove "At a Glance"
+	remove_meta_box('dashboard_activity', 'dashboard', 'normal');		// Remove "Activity" which includes "Recent Comments"
+	remove_meta_box('dashboard_quick_press', 'dashboard', 'side');		// Remove Quick Draft
+	remove_meta_box('dashboard_primary', 'dashboard', 'side');			// Remove WordPress Events and News
 
-	//$hidden = apply_filters( 'default_hidden_meta_boxes', $hidden, $screen );
 }
 
 

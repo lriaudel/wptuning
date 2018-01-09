@@ -51,6 +51,7 @@ function remove_author_pages_page() {
 		status_header( 404 );
 	}
 }
+
 function remove_author_pages_link( $content ) {
 	return get_option( 'home' );
 }
