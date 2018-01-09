@@ -1,4 +1,4 @@
-# WP-Tuning
+# WP Tuning
 Differents hooks and functions to improve WordPress and basic customization in a plugin.
 
 ## Security
