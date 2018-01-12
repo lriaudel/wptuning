@@ -2,6 +2,7 @@
 
 /**
  * Deactivate REST-API
+ * @return void
  */
 function wptuning_deactivate_rest_api(){
 
@@ -21,6 +22,29 @@ function wptuning_deactivate_rest_api(){
 	add_filter( 'rest_jsonp_enabled', '__return_false' );
 
 }
+
+
+/**
+ * Disable REST API user endpoints
+ * @see https://fr.wordpress.org/plugins/smntcs-disable-rest-api-user-endpoints/
+ * @since 1.1
+ * @return void
+ */
+function wptuning_disable_rest_api_user() {
+
+	if( !is_user_logged_in() ) {
+		add_filter( 'rest_endpoints', function( $endpoints ){
+			if ( isset( $endpoints['/wp/v2/users'] ) ) {
+				unset( $endpoints['/wp/v2/users'] );
+			}
+			if ( isset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ) ) {
+				unset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] );
+			}
+			return $endpoints;
+		});
+	}
+
+} // end wptuning_disable_rest_api_user
 
 /**
  * Hide connections errors in wp-login.php

@@ -24,6 +24,7 @@ function add_medium_large( $format ){
  * Plugin URI:   https://github.com/BeAPI/bea-sanitize-filename
  * @version      1.0.2
  * @author		BeAPI (http://www.beapi.fr)
+ * @return void
  */
 function wptuning_protect_media_filename() {
 

@@ -8,11 +8,20 @@ global $wpt_actions;
 $wpt_actions = array(
 	'rest-api' =>  array(
 		'label'			=> __( 'Deactivate REST-API', WPT_LG ),
-		'description'	=> __( '', WPT_LG ),
+		'description'	=> __( 'This link become not accessible: ', WPT_LG ).'<code><a href="'.home_url('wp-json').'">'.home_url('wp-json').'</a></code>',
 		'section'		=> 'security',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_deactivate_rest_api',
 		'default'		=> 'false',
+		'args'			=> '',
+	),
+	'rest-api-users' =>  array(
+		'label'			=> __( 'Disable REST API user endpoints ', WPT_LG ),
+		'description'	=> __( 'Disable the user endpoint for non connected user (not display the list of wordpress users)', WPT_LG ).' <code><a href="'.home_url('/wp/v2/users').'">'.home_url('/wp/v2/users').'</a></code>',
+		'section'		=> 'security',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptuning_disable_rest_api_user',
+		'default'		=> 'true',
 		'args'			=> '',
 	),
 	'connection_error' => array(
@@ -26,7 +35,7 @@ $wpt_actions = array(
 	),
 	'deactivate_author' => array(
 		'label'			=> __( 'Deactivate author page and author link', WPT_LG ),
-		'description'	=> __( '', WPT_LG ),
+		'description'	=> __( 'This links and pages list the login of differents authors', WPT_LG ),
 		'section'		=> 'security',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_deactivate_author_page_and_link',

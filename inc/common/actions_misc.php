@@ -1,12 +1,12 @@
 <?php
 
-
 /*========================= emoji ============================= */
 
 /**
  * Disable the emoji's
  * @see https://www.keycdn.com/blog/website-performance-optimization/#http
  * @see https://fr.wordpress.org/plugins/disable-emojis/
+ * @return void
  */
 function wptuning_disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );

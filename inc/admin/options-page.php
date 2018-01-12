@@ -124,9 +124,11 @@ function wptuning_options_page() {
 			<?php echo __( 'Options to improve WordPress', WPT_LG ); ?>
 		</p>
 		<p>
-			<button type="button" id="wptunning-default-button" class="button-primary">
+			<button type="button" id="wptunning-default-button" class="button-secondary">
 				<?php _e('Set to default setting', WPT_LG) ?>
 			</button>
+			&nbsp;
+			<?php submit_button( '', 'primary', 'submit', false ); ?>
 		</p>
 		<?php
 		settings_fields( WPT_SLUG );

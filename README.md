@@ -3,6 +3,7 @@ Differents hooks and functions to improve WordPress and basic customization in a
 
 ## Security
 - Deactivate WP Rest API
+- Disable REST API user endpoints (new in v1.1)
 - Hide connections errors
 - Deactivate author page and author link
 
