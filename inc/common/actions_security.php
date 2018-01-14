@@ -27,7 +27,7 @@ function wptuning_deactivate_rest_api(){
 /**
  * Disable REST API user endpoints
  * @see https://fr.wordpress.org/plugins/smntcs-disable-rest-api-user-endpoints/
- * @since 1.1
+ * @since 1.1.0
  * @return void
  */
 function wptuning_disable_rest_api_user() {
