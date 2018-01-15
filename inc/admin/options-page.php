@@ -9,7 +9,7 @@ add_action( 'admin_enqueue_scripts', 'wptuning_enqueue_script' );
 function wptuning_enqueue_script() {
 	global $pagenow;
 
-	if ( 'options-general.php' == $pagenow && WPT_PAGE_SLUG == $_GET['page'] ) {
+	if ( 'options-general.php' == $pagenow && isset( $_GET['page'] ) && WPT_PAGE_SLUG == $_GET['page'] ) {
 		wp_register_script( 'wptuning-admin', WPT_URL . 'assets/js/admin.js', 'jquery' );
 		wp_enqueue_script( 'wptuning-admin' );
 	}
