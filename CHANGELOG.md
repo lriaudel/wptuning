@@ -4,7 +4,7 @@
 - Update `bea_sanitize_file_name()` function
 - Test if function `bea_sanitize_file_name()` exist
 - "Disable comment feed" set to default
-- Fix test $_GET['page'] on option-page.php
+- Fix test `$_GET['page']` on option-page.php
 
 ## 1.1.0
 - Add Disable REST API user endpoints
