@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.1.1
+- Update `bea_sanitize_file_name()` function
+- Test if function `bea_sanitize_file_name()` exist
+- "Disable comment feed" set to default
+
 ## 1.1.0
 - Add Disable REST API user endpoints
 - Add link to "Disable REST API"

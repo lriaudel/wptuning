@@ -163,7 +163,7 @@ $wpt_actions = array(
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_comments_feed',
-		'default'		=> 'false',
+		'default'		=> 'true',
 		'args'			=> '',
 	),
 	/***

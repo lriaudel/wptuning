@@ -33,10 +33,15 @@ function wptuning_protect_media_filename() {
 
 }
 
-function bea_sanitize_file_name_chars( $special_chars = array() ) {
-	$special_chars = array_merge( array( '’', '‘', '“', '”', '«', '»', '‹', '›', '—', '€' ), $special_chars );
-	return $special_chars;
+if ( !function_exists( 'bea_sanitize_file_name_chars' ) ) {
+
+	function bea_sanitize_file_name_chars( $special_chars = array() ) {
+		$special_chars = array_merge( array( '’', '‘', '“', '”', '«', '»', '‹', '›', '—', '€' ), $special_chars );
+		return $special_chars;
+	}
+
 }
+
 
  /**
  * Filters the filename by adding more rules :
@@ -46,11 +51,29 @@ function bea_sanitize_file_name_chars( $special_chars = array() ) {
  * @param string $file_name
  * @return string
  */
-function bea_sanitize_file_name( $file_name ) {
-	preg_match( '/\.[^\.]+$/i', $file_name, $ext );
-	$ext = $ext[0];
-	$file_name = str_replace( $ext, '', $file_name );
-	$file_name = sanitize_title( $file_name );
-	$file_name = str_replace( '_', '-', $file_name );
-	return $file_name . $ext;
+if ( !function_exists( 'bea_sanitize_file_name' ) ) {
+
+	function bea_sanitize_file_name( $file_name = '' ) {
+		// Empty filename
+		if ( empty($file_name) ) {
+			return $file_name;
+		}
+		// get extension
+		preg_match( '/\.[^\.]+$/i', $file_name, $ext );
+		// No extension, go out ?
+		if ( ! isset( $ext[0] ) ) {
+			return $file_name;
+		}
+		// Get only first part
+		$ext = $ext[0];
+		// work only on the filename without extension
+		$file_name = str_replace( $ext, '', $file_name );
+		// only lowercase
+		// replace _ by -
+		$file_name = sanitize_title( $file_name );
+		// remove accents
+		$file_name = str_replace( '_', '-', $file_name );
+		return $file_name . $ext;
+	}
+
 }

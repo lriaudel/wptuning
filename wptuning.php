@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: WP Tuning
- * Plugin URI: https://codetheworld.info
+ * Plugin URI: https://codetheworld.info/wptuning/
  * Description: Differents hooks and functions to improve WordPress and basic customization in a plugin.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: lriaudel
  * Text Domain: wptuning
  * Domain Path: /languages/
@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || die( 'O.o' );
 /**
  * Constants
  */
-define( 'WPT_VERSION', '1.1.0' );
+define( 'WPT_VERSION', '1.1.1' );
 define( 'WPT_DIR', dirname( __FILE__ ) );
 define( 'WPT_URL', plugin_dir_url( __FILE__ ) );
 define( 'WPT_SLUG', 'wptuning_settings' );
