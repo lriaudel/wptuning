@@ -3,7 +3,7 @@
  * Plugin Name: WP Tuning
  * Plugin URI: https://codetheworld.info/wptuning/
  * Description: Differents hooks and functions to improve WordPress and basic customization in a plugin.
- * Version: 1.1.1
+ * Version: 1.2
  * Author: lriaudel
  * Text Domain: wptuning
  * Domain Path: /languages/
@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || die( 'O.o' );
 /**
  * Constants
  */
-define( 'WPT_VERSION', '1.1.1' );
+define( 'WPT_VERSION', '1.2' );
 define( 'WPT_DIR', dirname( __FILE__ ) );
 define( 'WPT_URL', plugin_dir_url( __FILE__ ) );
 define( 'WPT_SLUG', 'wptuning_settings' );
@@ -61,14 +61,19 @@ add_action( 'plugins_loaded', 'wptuning_init' );
 
 function wptuning_init() {
 
-	include WPT_DIR . '/inc/common/wpt_actions.php';
-	include WPT_DIR . '/inc/common/wpt_sections.php';
+	// Load translations
+	load_plugin_textdomain( WPT_LG, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 	global $wpt_sections;
+
+	include WPT_DIR . '/inc/common/wpt_sections.php';
 
 	foreach ( $wpt_sections as $section ) {
 		include $section['file'];
 	}
+
+	include WPT_DIR . '/inc/common/wpt_actions.php';
+
 
 	if ( is_admin() ) {
 		include WPT_DIR . '/inc/admin/options-page.php';
