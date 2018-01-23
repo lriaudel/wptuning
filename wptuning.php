@@ -7,11 +7,11 @@
  * Author: lriaudel
  * Text Domain: wptuning
  * Domain Path: /languages/
- * Contributors:
+ * Contributors: Wolforg, Mahjouba91
  * GitHub Plugin URI: https://github.com/lriaudel/wp-tuning
  * Tested up to: 4.9
  * Requires PHP: 5.4+
- * Author URI: http://ludovic.riaudel.net
+ * Author URI: https://ludovic.riaudel.net
  * Licence: GPLv2
  *
  * Copyright 2013-2017 Ludovic Riaudel
@@ -73,7 +73,6 @@ function wptuning_init() {
 	}
 
 	include WPT_DIR . '/inc/common/wpt_actions.php';
-
 
 	if ( is_admin() ) {
 		include WPT_DIR . '/inc/admin/options-page.php';

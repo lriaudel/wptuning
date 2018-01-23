@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.2
+- Add new section call `Gutenberg`
+- Add new feature : Disable Gutenberg by post Types
+- Translate ready
+- Translate in French by Wolforg
+
 ## 1.1.1
 - Update `bea_sanitize_file_name()` function
 - Test if function `bea_sanitize_file_name()` exist
