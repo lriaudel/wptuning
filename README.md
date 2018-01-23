@@ -18,6 +18,9 @@ Differents hooks and functions to improve WordPress and basic customization in a
 - Remove `H1` from the WordPress editor
 - Define the number of post revision
 
+## Gutenberg (new in v1.2)
+- Deactive Gutenberg by post type
+
 ## HTML Head cleaning
 - Deactivate WordPress version
 - Remove Windows Live Writer Manifest

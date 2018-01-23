@@ -27,6 +27,7 @@ function wptuning_exe() {
 						break;
 
 					case 'radio':
+					case 'custom':
 					case 'checkbox':
 
 						if ( '1' == $value || 'on' == $value ) {
@@ -50,6 +51,13 @@ function wptuning_exe() {
 } // end wptuning_exe
 
 
-function wpt_action_callback( $callback ){
-	call_user_func( $callback );
+function wpt_action_callback( $callback, $arg = null ){
+
+	if( empty( $arg ) ) {
+		call_user_func( $callback );
+	}
+	else {
+		call_user_func_array( $callback, $arg );
+	}
+
 }

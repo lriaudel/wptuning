@@ -5,6 +5,15 @@
 add_action( 'admin_menu', 'wptuning_add_admin_menu' );
 add_action( 'admin_init', 'wptuning_settings_init' );
 add_action( 'admin_enqueue_scripts', 'wptuning_enqueue_script' );
+add_action( 'admin_head', 'wptuning_css');
+
+function wptuning_css() {
+	echo '<style>
+		table.form-table tr.wptuning_disabled th {
+			color: #aaa;
+		}
+	</style>';
+}
 
 function wptuning_enqueue_script() {
 	global $pagenow;
@@ -84,6 +93,10 @@ function wptuning_field_view( $id, $action ) {
 	}
 
 	switch ( $action['type'] ) {
+
+		case 'custom':
+				wpt_action_callback( $action['custom'] , array($id) );
+			break;
 
 		case 'text':
 			?>

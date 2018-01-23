@@ -21,6 +21,11 @@ $wpt_sections = array(
 		'description'	=> __( '', WPT_LG ),
 		'file'			=> WPT_DIR . '/inc/common/actions_misc.php',
 	),
+	'gutenberg' => array(
+		'name'			=> __( 'Gutenberg', WPT_LG ),
+		'description'	=> __( '', WPT_LG ),
+		'file'			=> WPT_DIR . '/inc/common/actions_gutenberg.php',
+	),
 	'head'	=> array(
 		'name'			=> __( 'Head', WPT_LG ),
 		'description'	=> __( '', WPT_LG ),

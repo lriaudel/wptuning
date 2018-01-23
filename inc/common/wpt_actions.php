@@ -96,6 +96,16 @@ $wpt_actions = array(
 		'default'		=> 'true',
 		'args'			=> '',
 	),
+	'deactive_post_type_gutenberg' => array(
+		'label'			=> __( 'Deactive Gutenberg by post type', WPT_LG ),
+		'description'	=> __( '', WPT_LG ),
+		'section'		=> 'gutenberg',
+		'type'			=> 'custom',
+		'custom'		=> 'wptuning_deactive_post_type_gutenberg_options',
+		'cb'			=> 'wptuning_deactive_post_type_gutenberg',
+		'default'		=> 'false',
+		'args'			=> wptuning_deactive_post_type_gutenberg_get_class(),
+	),
 	'define_post_revision' => array(
 		'label'			=> __( 'Number max of revisions', WPT_LG ),
 		'description'	=> __( 'Define the number of revisions you want that WordPress saved. (Leave blank for unlimited)', WPT_LG ),

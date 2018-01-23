@@ -111,7 +111,7 @@ function wptuning_define_post_revision() {
 
 	$post_revision_nb = $wptuning_settings['define_post_revision'];
 
-	if( '' === $post_revision_nb ){
+	if( '' === $post_revision_nb ) {
 		return;
 	}
 	else{
