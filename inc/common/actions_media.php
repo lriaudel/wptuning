@@ -77,3 +77,17 @@ if ( !function_exists( 'bea_sanitize_file_name' ) ) {
 	}
 
 }
+
+
+ /**
+ * Filters the mime types accepted in media :
+ * - Add SVG files
+ * @since 1.3
+ * @param array $mimes
+ * @return array
+ */
+function wptuning_add_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'wptuning_add_mime_types');
