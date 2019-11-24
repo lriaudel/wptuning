@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.3
+- Autorise the uypload of SVG files in Media libray
+
 ## 1.2
 - Add new section call `Gutenberg`
 - Add new feature : Disable Gutenberg by post Types
