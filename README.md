@@ -15,7 +15,7 @@ Differents hooks and functions to improve WordPress and basic customization in a
 - Dashboard cleaning
 - Disallow file editor
 - Deactive Emoji
-- Remove `H1` from the WordPress editor
+- Remove `H1` from the WordPress classic editor
 - Define the number of post revision
 
 ## Gutenberg (new in v1.2)
