@@ -1,5 +1,6 @@
 # WP Tuning
 Differents hooks and functions to improve WordPress and basic customization in a plugin.
+For more detail see : https://codetheworld.net/2018/01/wptuning/
 
 ## Security
 - Deactivate WP REST API
