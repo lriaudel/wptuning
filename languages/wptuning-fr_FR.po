@@ -2,51 +2,54 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tuning\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-23 11:32+0100\n"
-"PO-Revision-Date: 2018-01-23 12:23+0100\n"
-"Last-Translator: Wp Trads <contact@wolforg.eu>\n"
+"POT-Creation-Date: 2020-05-14 21:17+0200\n"
+"PO-Revision-Date: 2020-05-14 21:17+0200\n"
+"Last-Translator: madvic <madvic@gmail.com>\n"
 "Language-Team: WP Trads <contact@wolforg.eu>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
 
-#: ../inc/admin/options-page.php:137
+#: inc/admin/options-page.php:137
 msgid "Options to improve WordPress"
 msgstr "Options pour améliorer WordPress"
 
-#: ../inc/admin/options-page.php:141
+#: inc/admin/options-page.php:141
 msgid "Set to default setting"
 msgstr "Réinitialiser les réglages"
 
-#: ../inc/admin/plugins.php:9
+#: inc/admin/plugins.php:9
 msgid "Settings"
 msgstr "Réglages"
 
-#: ../inc/common/actions_media.php:15
+#: inc/common/actions_media.php:29
 msgid "Medium Large"
 msgstr "Moyen large"
 
-#: ../inc/common/exe_actions.php:40
+#: inc/common/exe_actions.php:40
 msgid "WP Tuning: Define a type in your action."
 msgstr "WP Tuning : Définissez un type dans votre action."
 
-#: ../inc/common/wpt_actions.php:10
+#: inc/common/wpt_actions.php:10
 msgid "Deactivate REST-API"
 msgstr "Désactiver la REST Api"
 
-#: ../inc/common/wpt_actions.php:11
+#: inc/common/wpt_actions.php:11
 msgid "This link become not accessible: "
 msgstr "Ce lien devient inaccessible : "
 
-#: ../inc/common/wpt_actions.php:19
+#: inc/common/wpt_actions.php:19
 msgid "Disable REST API user endpoints "
 msgstr "Désactiver les points de terminaison d’utilisateur REST API"
 
-#: ../inc/common/wpt_actions.php:20
+#: inc/common/wpt_actions.php:20
 msgid ""
 "Disable the user endpoint for non connected user (not display the list of "
 "wordpress users)"
@@ -54,35 +57,35 @@ msgstr ""
 "Désactiver le point de terminaison pour un utilisateur non connecté "
 "(n’affiche pas la liste des utilisateurs)"
 
-#: ../inc/common/wpt_actions.php:28
+#: inc/common/wpt_actions.php:28
 msgid "Hide connection error"
 msgstr "Masquer les erreurs de connexion"
 
-#: ../inc/common/wpt_actions.php:29
+#: inc/common/wpt_actions.php:29
 msgid "Hide connection error information in <code>wp-login.php</code>"
 msgstr ""
 "Masquer les informations d’erreur de connexion dans <code>wp-login.php</"
 "code>."
 
-#: ../inc/common/wpt_actions.php:37
+#: inc/common/wpt_actions.php:37
 msgid "Deactivate author page and author link"
 msgstr "Désactiver la page de l’auteur et les liens"
 
-#: ../inc/common/wpt_actions.php:38
+#: inc/common/wpt_actions.php:38
 msgid "This links and pages list the login of differents authors"
 msgstr ""
 "Ces liens et les pages listant les identifiant de connexion différents "
 "auteurs."
 
-#: ../inc/common/wpt_actions.php:46
+#: inc/common/wpt_actions.php:46
 msgid "No punctuation and accents for uploaded file"
 msgstr "Pas de ponctuation et d’accent pour les fichiers téléversés"
 
-#: ../inc/common/wpt_actions.php:55
+#: inc/common/wpt_actions.php:55
 msgid "Add format <em>Medium Large</em>"
 msgstr "Ajout du format <em>Moyen large</em>"
 
-#: ../inc/common/wpt_actions.php:56
+#: inc/common/wpt_actions.php:56
 msgid ""
 "Display the existent default format <em>Medium Large</em> (768px) when you "
 "choose a media in a post"
@@ -90,11 +93,15 @@ msgstr ""
 "Affiche le format <em>Moyen large</em> existant par défaut (768 pixels) "
 "quand vous choisissez un média dans un article."
 
-#: ../inc/common/wpt_actions.php:64
+#: inc/common/wpt_actions.php:64
+msgid "Allow SVG files"
+msgstr "Autoriser les fichiers SVG"
+
+#: inc/common/wpt_actions.php:73
 msgid "Clean dashboard"
 msgstr "Nettoyer le tableau de bord"
 
-#: ../inc/common/wpt_actions.php:65
+#: inc/common/wpt_actions.php:74
 msgid ""
 "Deactivate the default widget (<em>welcome panel</em>, <em>Activity</em>, "
 "<em>Quick Draft</em>, <em>WordPress Events and News</em>)  in admin dashboard"
@@ -103,41 +110,41 @@ msgstr ""
 "<em>Brouillon rapide</em>, <em>Évènements et nouveautés WordPress</em>) dans "
 "le tableau de bord de l’administration."
 
-#: ../inc/common/wpt_actions.php:73
+#: inc/common/wpt_actions.php:82
 msgid "Disallow file editor"
 msgstr "Désactiver l’éditeur de fichier"
 
-#: ../inc/common/wpt_actions.php:74
+#: inc/common/wpt_actions.php:83
 msgid "Disallow file editor for plugins and themes in wp-admin."
 msgstr ""
 "Désactiver l’éditeur de fichiers pour les thèmes et l’extension dans wp-"
 "admin."
 
-#: ../inc/common/wpt_actions.php:82
+#: inc/common/wpt_actions.php:91
 msgid "Disabled emoji"
 msgstr "Désactiver les emoji"
 
-#: ../inc/common/wpt_actions.php:83
+#: inc/common/wpt_actions.php:92
 msgid "Reduces resources number loaded on front page"
 msgstr "Réduction du nombre de ressources chargées sur la page d’accueil."
 
-#: ../inc/common/wpt_actions.php:91
+#: inc/common/wpt_actions.php:100
 msgid "Remove H1 in Tiny MCE"
 msgstr "Retirer H1 dans Tiny MCE"
 
-#: ../inc/common/wpt_actions.php:92
+#: inc/common/wpt_actions.php:101
 msgid "<em>H1</em> should never be used in the editor"
 msgstr "<em>H1</em> ne doit jamais être utilisé dans l’éditeur."
 
-#: ../inc/common/wpt_actions.php:100
-msgid "Deactive Gutenberg by post type"
-msgstr "Désactiver Gutenberg par type de publication"
+#: inc/common/wpt_actions.php:110
+msgid "Disable Block Editor default FullScreen mode"
+msgstr "Désactiver le mode plein écran de l'éditeur"
 
-#: ../inc/common/wpt_actions.php:110
+#: inc/common/wpt_actions.php:130
 msgid "Number max of revisions"
 msgstr "Nombre mximum de révisions"
 
-#: ../inc/common/wpt_actions.php:111
+#: inc/common/wpt_actions.php:131
 msgid ""
 "Define the number of revisions you want that WordPress saved. (Leave blank "
 "for unlimited)"
@@ -145,81 +152,79 @@ msgstr ""
 "Définissez le nombre de révisions que vous voulez que WordPress enregistre. "
 "(Laissez vide pour ne pas limiter)"
 
-#: ../inc/common/wpt_actions.php:119
+#: inc/common/wpt_actions.php:139
 msgid "Remove WordPress version"
 msgstr "Retirer la version de WordPress"
 
-#: ../inc/common/wpt_actions.php:120
+#: inc/common/wpt_actions.php:140
 msgid "Remove the generator tag that is generated"
 msgstr "Retirer la balise créée par le générateur."
 
-#: ../inc/common/wpt_actions.php:128
+#: inc/common/wpt_actions.php:148
 msgid "Remove Windows Live Writer Manifest"
 msgstr "Supprimer le manifeste de Windows Live Writer"
 
-#: ../inc/common/wpt_actions.php:129
+#: inc/common/wpt_actions.php:149
 msgid "Remove Windows Live Writer Manifest Link."
 msgstr "Supprimer le lien du manifeste de Windows Live Writer"
 
-#: ../inc/common/wpt_actions.php:153
+#: inc/common/wpt_actions.php:173
 msgid "Deactivate XML-RPC"
 msgstr "Désactiver XML-RPC"
 
-#: ../inc/common/wpt_actions.php:154
+#: inc/common/wpt_actions.php:174
 msgid "Deactivate XML-RPC methods requiring authentication are enabled."
 msgstr ""
 "Désactiver les méthodes XML-RPC nécessitant l'authentification qui sont "
 "activées."
 
-#: ../inc/common/wpt_actions.php:162
+#: inc/common/wpt_actions.php:182
 msgid "Remove RSS feed"
 msgstr "Retirer le flux RSS"
 
-#: ../inc/common/wpt_actions.php:171
+#: inc/common/wpt_actions.php:191
 msgid "Remove Comment RSS feed"
 msgstr "Retirer le Flux RSS des commentaires"
 
-#: ../inc/common/wpt_sections.php:10
+#: inc/common/wpt_sections.php:10
 msgid "Security"
 msgstr "Sécurité"
 
-#: ../inc/common/wpt_sections.php:15
+#: inc/common/wpt_sections.php:15
 msgid "Media"
 msgstr "Média"
 
-#: ../inc/common/wpt_sections.php:20
+#: inc/common/wpt_sections.php:20
 msgid "Misc"
 msgstr "Divers"
 
-#: ../inc/common/wpt_sections.php:25
+#: inc/common/wpt_sections.php:25
 msgid "Gutenberg"
 msgstr "Gutenberg"
 
-#: ../inc/common/wpt_sections.php:30
+#: inc/common/wpt_sections.php:30
 msgid "Head"
 msgstr "Head"
 
-#. Name of the plugin
-msgid "WP Tuning"
-msgstr "WP Tuning"
+#~ msgid "Deactive Gutenberg by post type"
+#~ msgstr "Désactiver Gutenberg par type de publication"
 
-#. URI of the plugin
-msgid "https://codetheworld.info/wptuning"
-msgstr "https://codetheworld.info/wptuning"
+#~ msgid "WP Tuning"
+#~ msgstr "WP Tuning"
 
-#. Description of the plugin
-msgid ""
-"Differents hooks and functions to improve WordPress and basic customization "
-"in a plugin."
-msgstr ""
-"Différents crochets d’actions et fonctions pour améliorer WordPress et "
-"personnalisations basiques dans une extension. Traduit par <a href=\"https://"
-"www.wptrads.com\">WP Trads</a>."
+#~ msgid "https://codetheworld.info/wptuning"
+#~ msgstr "https://codetheworld.info/wptuning"
 
-#. Author of the plugin
-msgid "lriaudel"
-msgstr "lriaudel"
+#~ msgid ""
+#~ "Differents hooks and functions to improve WordPress and basic "
+#~ "customization in a plugin."
+#~ msgstr ""
+#~ "Différents crochets d’actions et fonctions pour améliorer WordPress et "
+#~ "personnalisations basiques dans une extension. Traduit par <a href="
+#~ "\"https://www.wptrads.com\">WP Trads</a>."
 
-#. Author URI of the plugin
-msgid "http://ludovic.riaudel.net"
-msgstr "http://ludovic.riaudel.net"
+#~ msgid "lriaudel"
+#~ msgstr "lriaudel"
+
+#~ msgid "http://ludovic.riaudel.net"
+#~ msgstr "http://ludovic.riaudel.net"

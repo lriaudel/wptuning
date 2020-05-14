@@ -11,6 +11,7 @@ For more detail see : https://codetheworld.net/2018/01/wptuning/
 ## Media
 - Sanitize filenames
 - Add medium format `medium_large` to media in admin
+- Allow SVG files
 
 ## Miscellaneous
 - Dashboard cleaning
@@ -19,8 +20,8 @@ For more detail see : https://codetheworld.net/2018/01/wptuning/
 - Remove `H1` from the WordPress classic editor
 - Define the number of post revision
 
-## Gutenberg (new in v1.2)
-- Deactive Gutenberg by post type
+## Gutenberg (new in v1.3)
+- Disable Block Editor default FullScreen mode
 
 ## HTML Head cleaning
 - Deactivate WordPress version

@@ -44,7 +44,7 @@ $wpt_actions = array(
 	),
 	'protect_media_filename' => array(
 		'label'			=> __( 'No punctuation and accents for uploaded file', WPT_LG ),
-		'description'	=> __( '', WPT_LG ),
+		'description'	=> '',
 		'section'		=> 'media',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_protect_media_filename',
@@ -57,6 +57,15 @@ $wpt_actions = array(
 		'section'		=> 'media',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_add_medium_large',
+		'default'		=> 'true',
+		'args'			=> '',
+	),
+	'add_svg_mime_types' => array(
+		'label'			=> __( 'Allow SVG files', WPT_LG ),
+		'description'	=> '',
+		'section'		=> 'media',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptuning_add_svg_mime_types',
 		'default'		=> 'true',
 		'args'			=> '',
 	),
@@ -96,7 +105,18 @@ $wpt_actions = array(
 		'default'		=> 'true',
 		'args'			=> '',
 	),
-	'deactive_post_type_gutenberg' => array(
+
+	'disable_editor_fullscreen' => array(
+		'label'			=> __( 'Disable Block Editor default FullScreen mode', WPT_LG ),
+		'description'	=> '',
+		'section'		=> 'gutenberg',
+		'type'			=> 'checkbox',
+		'cb'			=> 'wptuning_disable_editor_fullscreen',
+		'default'		=> 'false',
+		'args'			=> '',
+	),
+	
+	/*'deactive_post_type_gutenberg' => array(
 		'label'			=> __( 'Deactive Gutenberg by post type', WPT_LG ),
 		'description'	=> __( '', WPT_LG ),
 		'section'		=> 'gutenberg',
@@ -105,7 +125,7 @@ $wpt_actions = array(
 		'cb'			=> 'wptuning_deactive_post_type_gutenberg',
 		'default'		=> 'false',
 		'args'			=> wptuning_deactive_post_type_gutenberg_get_class(),
-	),
+	),*/
 	'define_post_revision' => array(
 		'label'			=> __( 'Number max of revisions', WPT_LG ),
 		'description'	=> __( 'Define the number of revisions you want that WordPress saved. (Leave blank for unlimited)', WPT_LG ),
@@ -160,7 +180,7 @@ $wpt_actions = array(
 	),
 	'feed_links' => array(
 		'label'			=> __( 'Remove RSS feed', WPT_LG ),
-		'description'	=> __( '', WPT_LG ),
+		'description'	=> '',
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_feed_link',
@@ -169,7 +189,7 @@ $wpt_actions = array(
 	),
 	'feed_links_extra' => array(
 		'label'			=> __( 'Remove Comment RSS feed', WPT_LG ),
-		'description'	=> __( '', WPT_LG ),
+		'description'	=> '',
 		'section'		=> 'head',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_comments_feed',

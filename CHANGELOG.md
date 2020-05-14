@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.3
+- Add 'Disable Block Editor default FullScreen mode'
+- Removal of gutenberg deactivation
+
 ## 1.2
 - Add new section call `Gutenberg`
 - Add new feature : Disable Gutenberg by post Types
@@ -21,5 +25,4 @@
 - Add wptuning.png for [Entrepot](https://github.com/imath/entrepot/ "Entrepot") by imath
 
 ## 1.0.0
-
 - Initial

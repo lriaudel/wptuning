@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 
 #. URI of the plugin
-msgid "https://codetheworld.info/wptuning/"
+msgid "https://codetheworld.net/wptuning/"
 msgstr ""
 
 #. Author of the plugin
