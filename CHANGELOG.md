@@ -1,12 +1,13 @@
 # Change Log
 
 ## 1.3
-- Add 'Disable Block Editor default FullScreen mode'
-- Removal of gutenberg deactivation
+- Add SVG support, and we can see the image in the media library (code de easy-svg)
+- Add `Disable Block Editor default FullScreen mode`
+- Removal `Disable Gutenberg by post Types`, It does'nt work since the version 5.0
 
 ## 1.2
 - Add new section call `Gutenberg`
-- Add new feature : Disable Gutenberg by post Types
+- Add new feature : `Disable Gutenberg by post Types`
 - Translate ready
 - Translate in French by Wolforg
 

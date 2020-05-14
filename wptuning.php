@@ -14,7 +14,7 @@
  * Author URI: https://ludovic.riaudel.net
  * Licence: GPLv2
  *
- * Copyright 2013-2017 Ludovic Riaudel
+ * Copyright 2013-2021 Ludovic Riaudel
  * */
 
 defined( 'ABSPATH' ) || die( 'O.o' );

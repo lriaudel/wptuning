@@ -62,7 +62,7 @@ $wpt_actions = array(
 	),
 	'add_svg_mime_types' => array(
 		'label'			=> __( 'Allow SVG files', WPT_LG ),
-		'description'	=> '',
+		'description'	=> __( 'Don\'t forget that the SVG files must have <code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</code> in the header. Otherwise you can used this plugins : <a href="https://wordpress.org/plugins/safe-svg/">Safe-SVG</a>', WPT_LG ),
 		'section'		=> 'media',
 		'type'			=> 'checkbox',
 		'cb'			=> 'wptuning_add_svg_mime_types',

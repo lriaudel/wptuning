@@ -1,19 +1,11 @@
 <?php
 
+
+include WPT_DIR . '/inc/common/actions_svg.php';
+
 /**
- * Allow SVG files 
- * 
- */ 
-function add_svg_mime_types($mimes) {
-	$mimes['svg'] = 'image/svg+xml';
-	return $mimes;
-}
-
-function wptuning_add_svg_mime_types() {
-	add_filter('upload_mimes', 'add_svg_mime_types');
-}
-
-
+ * Add medium large
+ */
 function wptuning_add_medium_large() {
 	add_filter( 'image_size_names_choose', 'add_medium_large' );
 }
