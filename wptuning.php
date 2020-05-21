@@ -3,7 +3,7 @@
  * Plugin Name: WP Tuning
  * Plugin URI: https://codetheworld.net/wptuning/
  * Description: Differents hooks and functions to improve WordPress and basic customization in a plugin.
- * Version: 1.3
+ * Version: 1.3.0
  * Author: lriaudel
  * Text Domain: wptuning
  * Domain Path: /languages/
@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || die( 'O.o' );
 /**
  * Constants
  */
-define( 'WPT_VERSION', '1.2' );
+define( 'WPT_VERSION', '1.3.0' );
 define( 'WPT_DIR', dirname( __FILE__ ) );
 define( 'WPT_URL', plugin_dir_url( __FILE__ ) );
 define( 'WPT_SLUG', 'wptuning_settings' );
