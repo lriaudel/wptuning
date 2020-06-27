@@ -8,7 +8,8 @@
  * Text Domain: wptuning
  * Domain Path: /languages/
  * Contributors: Wolforg, Mahjouba91
- * GitHub Plugin URI: https://github.com/lriaudel/wp-tuning
+ * GitHub Plugin URI: lriaudel/wptuning
+ * GitHub Plugin URI: https://github.com/lriaudel/wptuning
  * Tested up to: 5.4
  * Requires PHP: 5.6+
  * Author URI: https://ludovic.riaudel.net
